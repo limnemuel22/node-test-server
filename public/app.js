@@ -1,3 +1,6 @@
+const movies = require('./movies');
+
+
 const person = {
     firstName: "Nemuel",
     lastName: "Lim",
@@ -94,3 +97,30 @@ console.log("Wendy: " + Wendy.life);
 User.prototype.magic = 60;
 console.log(Bucky.magic);
 console.log(Wendy.magic);
+
+/* movies.printAvatar();
+console.log(movies.favMovie); */
+
+
+require('./emily');
+require('./bucky');
+
+const fs = require('fs');
+const path = require('path');
+const websiteHome = "Desktop/Bucky/thenewboston/index.html";
+const websiteAbout = "Desktop/Bucky/thenewboston/about.html";
+console.log(path.normalize(websiteHome));
+console.log(path.dirname(websiteAbout));
+console.log(path.basename(websiteAbout));
+console.log(path.extname(websiteAbout));
+
+
+fs.writeFileSync("corn.txt", "Corn is good, corn is life");
+console.log(fs.readFileSync("corn.txt").toString());
+
+/* setInterval(() => {
+    console.log("beef");
+}, 2000); */
+/* 
+console.log(__dirname);
+console.log(__filename); */
